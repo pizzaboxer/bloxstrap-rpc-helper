@@ -54,17 +54,17 @@ end
 	Change or reset the user's Rich Presence activity if they are running Bloxstrap with the option enabled.
 ]=]
 function BloxstrapRPC.SetRichPresence(data: RichPresence)
-	if data.timeStart then
+	if data.timeStart ~= nil then
 		data.timeStart = math.round(data.timeStart)
 	end
-	if data.timeEnd then
+	if data.timeEnd ~= nil then
 		data.timeEnd = math.round(data.timeEnd)
 	end
 
-	if data.smallImage then
+	if data.smallImage ~= nil then
 		data.smallImage.assetId = SanitiseAssetId(data.smallImage.assetId)
 	end
-	if data.largeImage then
+	if data.largeImage ~= nil then
 		data.largeImage.assetId = SanitiseAssetId(data.largeImage.assetId)
 	end
 
