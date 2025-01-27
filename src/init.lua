@@ -19,7 +19,7 @@ export type RichPresence = {
 }
 
 export type RichPresenceImage = {
-	assetId: number? | string?,
+	assetId: (number | string)?,
 	hoverText: string?,
 	clear: boolean?,
 	reset: boolean?,
